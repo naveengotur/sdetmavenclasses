@@ -1,0 +1,106 @@
+Xpath is derived from XML path, basically xpath work on XML.
+Xpath is an Address of the element
+DOM -> Document Object Model.
+
+2types of Xpath [App URL -> "https://demo.nopcommerce.com/"]
+---------------
+1.Absolute xpath(full xpath)-> it is start from begining and each every node it will capture and it reaches the final node.
+Ex: -> /html/body/div[6]/div[1]/div[2]/div[2]/form/input
+2.Relative Xpath(partial xpath) -> by using this attribute,it will directly jump into the element and then it will findout. 
+Ex: -> //*[@id="small-searchterms"]
+
+Which xpath will be preferred?
+Relative xpath.
+
+Diff b/w absolute & relative xpath?
+1.Absolute xpath starts with /  --> represents root node
+  Relative xpath starts with // --> 
+
+2.Absolute xpath do not user attributes
+  Relative xpath works with attribute
+
+3.Absolute xpath traverse through each node till it finds element.
+ Relative xpath directly jump and find the element by using attribute.
+
+Relative xpath 
+--------------
+1)Automatically -Dev-tools, selectorHub 
+Ex: //*[@id="swiper-wrapper-739f0b78e3bdfcd8"]/div[2]/a/img
+Ex: /html/body/div[6]/div[3]/div/div/div/div/div[1]/div[1]/div[2]/a/img
+
+Note ->
+Types of xpath, which one is preferred to use? Then relative is used mostly, 
+why not absolute? reason ->Developer keep changes on the web page, they can add the new element, they can remove the existing element, reposition of element, because of these keep changes the  hireache will impacted and our xpath will broken, then we can't locate our element.
+In Relative xpath -> worked based on attribute of element, in the xpath "//" will directly jump on the attribute of element, so the attribute will not change.
+
+2)Manually(own xpath)
+Syntax: 
+.......
+//tagname[@attribute='value']
+ex: -> //img[@alt='Picture of Apple MacBook Pro']
+
+//*[@attribute='value']
+ex :-> //*[@alt='Picture of Apple MacBook Pro']
+
+
+//Xpath with single Attribute
+----------------------
+driver.findElement(By.xpath("//input[@type='text']")).sendKeys("testing");
+
+//Xpath with multiple Attribute
+---------------------------------
+driver.findElement(By.xpath("//input[@type='text'][@name='q']")).sendkeys("test");
+
+xpath with 'and' 'or' Opertors
+-----------------------
+//input[@type='text' and @name='q'] -> in the and operator both the attribute should be match.
+//input[@type='text' or @name='q']  -> in the 'or'operator if one attribute should match.
+
+//Xpath with inner text - text()
+------------------------
+//a[text()='Desktops ']
+
+<a href="https://google.com"> Click Me!</a>
+linktext = yes
+innertext = yes
+
+<div> Welcome </div>
+linktext = no
+innertext = yes
+
+Xpath with contains()
+---------------------
+//input[contains(@placeholder,'Sea')]
+
+Xpath with starts-with() -> it will start begining of the String, using in Dynamic WebElement
+------------------------
+//input[starts-with(@placeholder,'Sea')]
+
+
+handling dynamic attributes[create by own]
+-----------------------
+//*[@id='start' or @id='stop']
+//*[contains(@id,'st')]
+//*[starts-with(@id,'st')]
+//*[contains(text(),'st')]  -> for inner text not for all.
+
+Ex: name=xyz001 xyz002 xyz003 xyz001 xyz002
+//*[contains(@name,'xyz')]
+//*[contains(@name,'00')]
+//*[starts-with(@name,'xyz')]
+
+name=1xyz,2xyz,3xyz
+//*[contains(@name,'xyz')]
+
+name=101xyz 201xyz 301xyz
+//*[contains(@name='xyz')]
+
+chained x-path
+-----------------
+//div[@class='picture']/a/img
+
+Ex: <div> </div>
+
+//div[contains(text(),'')]
+ or
+[contains(., '')]

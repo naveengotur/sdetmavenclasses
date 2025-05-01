@@ -1,0 +1,18 @@
+driver.switchTo().frame(name)
+driver.switchTo().frame(id)
+driver.switchTo().frame(WebElement)
+driver.switchTo().frame(index)
+
+3types of switching methods
+---------------------------
+1.browser windows
+  driver.switchTo().window(windowId/windowhandle)
+2.alerts
+  driver.switchTo().alert()
+  driver.switchTo().accept()
+  driver.switchTo().dismiss()
+3.frames
+  driver.switchTo().frame(id);
+  driver.switchTo().frame(name);
+  driver.switchTo().frame(webElement);
+  

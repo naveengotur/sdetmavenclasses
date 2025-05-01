@@ -1,0 +1,19 @@
+Note -> 1.Dependency -> dependsOnMethods = { "method name1", method name2", method name3", ...}
+        2.If we used dependency, then open app got failed, remaining methods should skipped.
+
+        
+        Grouping
+----------
+
+class1 ->m1,m2,m3...
+class2 ->m4,m5,m6...
+class3 ->m7,m8,m9..
+-----
+sanity -> basic functionality test.
+regression -> re-testing the defects.
+functional ->all the tests. [it is combination of two groups.
+
+requirements ->
+loginByfacebook, loginByemail, loginbytwitter -> sanity
+signupByFacebook, signupByTwitter, signupByEmail ->regression, 
+paymentinRupees, paymentinDollars ->sanity, regression (functional).

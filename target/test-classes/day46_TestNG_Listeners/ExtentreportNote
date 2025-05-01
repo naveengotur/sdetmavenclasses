@@ -1,0 +1,11 @@
+Extent Report
+-------------
+1.ExtentSparkReporter //UI of the report
+2.ExtentReports  //populate common info on the report
+3.ExtentTest  //creating test case entries in the report and update status of the test.
+
+In the Dependencey -> add the " extentreports "
+
+Note : 1.Once we run the XML.file, then report will generated.Again the XML file is running, it will be clear report, then New report will be generated.
+ 2.In the Extend report can't maintain the history of the report.
+3.By the giving the hard coded xml-name.

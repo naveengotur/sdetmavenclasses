@@ -1,0 +1,48 @@
+Ex: https://www.cit.com/cit-bank/resources/calculators/certificate-of-deposit-calculator
+-----------------------------------------------------------------------------------
+Day -42 TestNG Test New Generation 
+[java based unit testing tool]
+
+Advantages->
+*Test Cases & test suites
+*Grouping of test cases
+*Prioritize
+*Parameterization
+*Parallel testing
+*Reports
+
+Test configuration ->
+----------------------
+1.Install testng in eclipse
+2.Add Testng library to build path/ add testng dependency in pom.xml
+3.Install XML Editor in marketplace
+
+@Test - annotation
+
+
+1.TestNG execute test methods based on alphabetical order.
+2.@Test (priority=num) controls the order of execution.
+3.Once you provide priority to the test methods, then order of methods is not considered.
+4.Priorities can be random numbers(no need to have consecutive numbers)
+5.If you dont provide priority then default value is zero(0).
+6.If the properties are same then again execute methods in alphabetical order.
+7.Negative values are allowed in priority.
+8.TestNG execute test methods only if they are having @Test Annotation.
+
+execute test cases using testng xml file.
+
+Test xml file
+--------------
+1.generate automatically
+2.manually
+
+
+Test Suite --> test cases --> test steps
+xml file --> classes --> Test Methods
+
+Create Test Suite -> select Testclass -> rightclick -> in TestNG -> select convert to TestNG -> it will create testng suite.
+2 Things achieved through xml
+-----------------------------
+1.executed group of test cases as a i suite
+2.we can generate testng reports (default)
+

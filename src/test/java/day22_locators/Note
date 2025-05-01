@@ -1,0 +1,34 @@
+
+1.Basic Locators -> id, name, Linktext, Partial LinkText, ClassName, TagName
+2.Customized Locators ->1. CSS Selector [Tag and ID, Tag and Class, Tag and Attribute, Tage, class and Attribute]
+                      2. Xpath [Absolute Xpath, Relative Xpath ]
+
+
+3.These are used to locate single webElement ->
+a.id
+b.name
+c.linkText
+d.partialLinkText
+
+Tablets  Table -linkText()
+Submit   Send  -partialLinkText()
+
+4.These are used to locate mulitple webElement and group of webElement ->
+Ex:total numbers of links, images, element in this page, for count or validate using these two locators.
+a.TagName
+b.Class
+
+5.findElement() -> find the return single webElement,
+6.findElements() -> find the return multiple webElement,
+diff
+scenario 1. locator matching with single webElement
+findElement(loc) --> single webElement -> return WebElement
+findElements(loc)--> single webElement -> return List<WebElement>
+
+scenario 2. Locator is matching with multi webElements
+findElement(loc)  ->single webElement at first locator-> return WebElement
+findElements(loc) ->multiple webElement ->return List<WebElement>
+
+scenario 3. locator is not matching with any element/s
+findElement() -> return "No Such Element Exception "
+findElements() -> will not throw any expection. Returns 0.

@@ -1,0 +1,30 @@
+Days-26 WebDriver Methods
+---------------------
+1.get methods
+2.conditional methods
+3.browser methods
+4.navigational methods
+5.wait methods
+
+1.get methods ->we can access these methods through webdriver instance
+-----------------------
+a.get(url) ->opens the url on the browser.
+b.getTitle() ->returns title of the page.
+c.getCurrentUrl() ->returns URL of the page.
+d.getPageSource()->returns source code of the page.
+e.getWindowHandle()->returns ID of the single browser window.
+f.getWindowHandles() -> returns ID of the mulitple browser windows.
+
+2.Conditional Methods - access these commands throught WebElement
+--------------------------
+returns boolean value(true/false)
+isDisplayed() -> we can check display status of the element.
+isEnabled()   -> we can check enable/disable status of the element/operational element.
+isSelected()  -> we can use to check the element is selected or not.
+
+3.browser Methods
+--------------
+a. close() - close single browser
+b. quit()  - close multiple browser
+
+

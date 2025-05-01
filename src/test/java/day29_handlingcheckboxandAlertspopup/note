@@ -1,0 +1,22 @@
+Alerts/popups
+....................
+1.click for JS Alert
+2.click for JS confirm
+3.click for JS prompt
+
+
+Note -> Without switching method, we can handle alert(), by the explicit wait method.
+
+driver.switchTo().alert().accept();
+driver.switchTo().alert().dismiss();
+driver.switchTo().alert().get();
+driver.switchTo().alert().sendKeys("text");
+
+Authetication pop-up  ->https://the-internet.herokuapp.com/basic_auth
+
+Authetication Alert ->https://the-internet.herokuapp.com/basic_auth
+                      or http://the-internet.herokuapp.com/
+
+https://the-internet.herokuapp.com/basic_auth
+syntax: -> https://username:password@the-internet.herokuapp.com/basic_auth
+Ex: https://amdin:admin@the-internet.herokuapp.com/basic_auth

@@ -1,0 +1,69 @@
+wait Commands
+----------------
+Synchronization
+
+Thread.sleep()
+---------------
+Adv -> 1.easy to use
+disAdv ->
+1.if the time is not sufficient then you will get exception.
+2.it will wait for maximum time out. this will reduce the performance script.
+3.multiple times.
+
+NoSuchElementException  ->Element is not present on the page, Synchronization.
+ElementNotFoundException -locator is in correct
+
+1)implicit wait
+Syntax: driver.manage().timeouts().implicitywait(Duration.ofSeconds(10));
+Adv: 
+1.single time/one statement
+2.it will not wait till maximum time if the element is available
+3.Applicable for all the elements
+4.easy to use.
+
+disadv:
+1.if the time is not sufficient then you will get exception.
+
+2)explicit wait/ fluent wait
+--------------------------
+declaration
+use
+Adv ->
+1.conditional based, it will work more effectively.
+2.finding elements is inclusive (for some conditions)
+3.it will wait for condition to be true, then consider the time.
+4.we need to write mulitple statements for mulitple elements
+
+Conditions
+-----------
+alertsPresent()
+elementsSelectionStateToBe()
+elementToBeClickable()
+elementToBeSelected()
+FrameToBeAvailableAndSwitchToIt()
+invisibilityOfTheElementLocated()
+invisibilityOfElementWithText()
+presenceOfAllElementLocated()
+presenceOfElementLocated()
+textToBePresentlnElement()
+textToBePresentlnElementLocated()
+textToBePresentlnElementValue()
+titlels()
+titleContains()
+visibilityOf()
+visibilityOfAllElements()
+visibilityOfAllElementsLocatedBy()
+visibilityOfElementLocated()
+
+Fluent Wait
+------
+//FluentWait declaration
+Wait<WebDriver> mywait = new FluentWait<WebDriver>(driver)
+    .withTimeout(Duration.ofSeconds(time))
+    .pollingEveryDuration.ofSeonds(time))
+    .ignoring(NoSuchElementException.class);
+//Usage
+WebElement foo= mywait.until(new Function<WebDriver, WebElement>(){
+public WebElement apply(WebDriver driver) {
+return driver.findElement(B.id("foo"));
+}});

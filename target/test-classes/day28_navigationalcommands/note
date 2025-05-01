@@ -1,0 +1,14 @@
+Navigational Commands
+a. navigate().to(url)
+b. navigate().back()
+c. navigate().forward()
+d. navigate().refresh()
+
+driver.get()  ->accepts URL only in the String format
+driver.navigate().to() -> accepts URL in String and url object format.
+
+getWindowHandle()
+getWindowHandles()
+
+driver.switchTo().window(windowID);
+

@@ -1,0 +1,19 @@
+Apache poi library
+Dependencies in pom.xml common, poi-ooxml, log4j-core
+
+Hierache key of Excel file 
+Excel file -> Workbok -> Sheets -> Rows -> Cells.
+
+FileInputStream -> Reading
+FileOutputStream -> Writing
+
+XSSFWorkbook - workbook
+XSSFSheet    - sheet
+XSSFRow      - row
+XSSFCell     - cell
+
+rows -> rows are counting from zero.
+cells -> cells are counting from 1.
+
+1.Reading data from Excel.
+Create on excel sheet, add some data like table format and save it filename.xlsx

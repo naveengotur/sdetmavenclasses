@@ -1,0 +1,24 @@
+-------
+Page Object Model [Design Pattern]
+------------------
+
+Test Case 
+-----------
+Locators
+Test methods ->code -> Validations+Actions
+ 
+
+2approaches to create page object classes
+---------------------------------------
+1.Without using PageFactory
+2.Using Pagefactory
+--------------------------------
+
+
+WebElement usertxt = driver.findElement(By.xpath("//input[@placeholder='Username']"));
+
+By loc = By.xpath("//input[@placeholder='Username']");
+driver.findElement(loc).sendKeys("xyz");
+
+
+........................................

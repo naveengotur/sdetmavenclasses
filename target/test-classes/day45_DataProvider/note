@@ -1,0 +1,15 @@
+1.Data Provider -- [data driven testing]
+a.not required the looping in DP.
+b.
+
+2.Using xml file -- [parallel testing]
+
+Parallel Testing using Xml file
+-----------------
+1.Create Test Case
+2.Created xml file to run the test case.
+3.passed browser name parameter from xml file and received in setup() method
+4.execute test case on chrome, edge, firefox (serial execution).
+5.execute test case on chrome, edge, firefox (parallel execution).
+5.If there is one thread count , execution is slow, then if there count is more, execution is fast. 
+

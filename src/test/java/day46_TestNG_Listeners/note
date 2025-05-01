@@ -1,0 +1,23 @@
+ITest Listners -> it is class, which contains method, implemented from ITest Listners.
+Defn:IT is a Interface, which is already there in TestNG.
+
+Steps -> 
+1.Create Test Case
+2.Create Listner Class
+3.Create Xml file and include both Test case & Listners class.
+
+15-04-2025
+2 ways to implement listener classs
+-----------------------------------
+Method1
+--------
+class myListener implements ITListener {
+
+}
+Method2
+--------
+class myListener extends TestListenerAdapter {
+
+}
+
+How you can implements TestNG Listeners ->by using ITListener and TestListenerAdapater.

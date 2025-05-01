@@ -1,0 +1,27 @@
+Mouse hover  -moveToElement(element)
+right click  -contextClick(element)
+double click -doubleClick(element)
+drag and drop -dragAndDrop(source, target)
+
+Actions -pre-defined class provided in selenium.
+build() - a method which will create an action.
+perfrom() -a method which will complete an action.
+
+getText()  Vs getAttribute(attribute)
+--------------
+Ex: 1.
+<input id="xyz"> welcome </input>
+
+--> getText() --> returns the inner text  -> welcome.
+--> getAttribute("id") -> returns the value of attribute -> xyz
+
+2. <input value="welcome"> </input>
+  -->   getAttribute("value") ->welcome
+
+getText() -> returns inner text of the webElement.
+getAttribute(attribute) ->returns value of attribute.
+
+Actions Vs Action
+---------------
+Actions -- class, will be used to perform mouse actions
+Action -- interface, will be used to store created actions.

@@ -1,0 +1,52 @@
+@Test
+
+@BeforeMethod
+@AfterMethod
+
+@BeforeClass
+@AfterClass
+
+@BeforeTest
+@AfterTest
+
+@BeforeSuite
+@AfterSuite
+
+TC1
+---
+1.Login  -> @BeforeMethod
+2.Search -> @Test
+3.Logout -> @AfterMethod
+4.Login  ->@Before
+5.Adv Search -> @Test
+6.Logout  ->@After
+
+TC2
+-------
+1.Login  -> @BeforeClass
+2.Search -> @Test
+5.Adv Search -> @Test
+6.Logout  ->AfterClass
+
+Assertion -Validation point
+---------------------------
+2kinds of assertions
+....................
+1.Hard Assertions -> [In this Assert got failed, next lines will not execute]
+                     [Hard assertion will be used last line in the class ]
+                     [Hard Assert have static class, directly we can use.]
+
+2.Soft Assertions -> [In this Assert got failed, next lines will execute]
+                     [SoftAssert is not static class, we can create an object and use it]
+                     [SoftAssert is always by-default is pass]
+                     [At the end class use ->  "object name.assertAll()" ]
+Note -> 1.Object is not directly create in the class.
+        2.Object can create in main method and any method.
+        3.SoftAssert is a class.
+        4.Class object is created in main method and any method.
+        5. "SoftAssert sa;" -> softassert is initiated in the class, then we can use in the any method in the class.
+
+        Note ->
+1.Conditional method -> will not failed,  if is not wrong.
+2.Assert method -> will make fail, if is not wrong.
+3.conditional with assert ->will make fail, if is not wrong.
